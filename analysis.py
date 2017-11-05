@@ -20,9 +20,9 @@ count_iterate_entries = df_iterate_entries.count() # counter of full iterate dat
 cached_hit_entries = 0 # variable to help us calculate cache hit ratio
 
 #For every row, we will search if it has a matching in cache layer
-for (i=0; i<= count_entries; i++):
+for i=0 in count_entries:
 
-	for (j=0; j<= count_iterate_entries; j++):
+	for j=0 in count_iterate_entries:
 		#Check if i is not equal to j. If yes, we are at the same line, so no need to check
 		if (i != j):
 			#First check if time(column index 1) is less than 30 minutes. If not, no need to check at all
