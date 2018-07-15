@@ -34,10 +34,10 @@ for i=0 in count_entries:
 				#Index 4: Passengers
 				#Index 5: Departure_date
 				#Index 6: Return_date
-				if (df_entries.iloc[i][2] == df_entries.iloc[j][2] && df_entries.iloc[i][3] == df_entries.iloc[j][3] df_entries.iloc[i][4] == df_entries.iloc[j][4] df_entries.iloc[i][5] == df_entries.iloc[j][5] df_entries.iloc[i][6] == df_entries.iloc[j][6])
+				if (df_entries.iloc[i][2] == df_entries.iloc[j][2] and df_entries.iloc[i][3] == df_entries.iloc[j][3] df_entries.iloc[i][4] == df_entries.iloc[j][4] df_entries.iloc[i][5] == df_entries.iloc[j][5] df_entries.iloc[i][6] == df_entries.iloc[j][6])
 					
 					#We found a cache hit, so increase counter
-					cached_hit_entries++
+					cached_hit_entries+=1
 					#if we find a cache entry, exit second for loop
 					break
 
@@ -48,6 +48,6 @@ cache_hit_ratio = cached_hit_entries/count_entries
 if (cache_hit_ratio < 0.20 ):
 	print (" It is not a good idea to implement caching layer. Our results shows that cache hit ratio is",cache_hit_ratio)
 else if (cache_hit_ratio > 0.20):
-	print ("It is a good idea to implement caching layer. Our results shows that cache hit ratio is",cache_hit_ratio")
+	print ("It is a good idea to implement caching layer. Our results shows that cache hit ratio is",cache_hit_ratio)
 else:
 	print ("After our analysis on historical data, we found that cache hit ratio is exactly 0.20.")
